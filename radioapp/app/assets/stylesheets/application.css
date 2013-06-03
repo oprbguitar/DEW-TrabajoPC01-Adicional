@@ -24,10 +24,28 @@
   -webkit-box-shadow: -7px 5px 17px #000000;
   box-shadow: -7px 5px 17px #000000;
 }
+.box {
+  width: 600px;
+  overflow: hidden;
+  margin: 100px auto 0 auto;
+  padding: 0px 0px 0px 0px;
+  background: #FFF; 
+  border-top: 0;
+  border-bottom: 0;
+
+  -moz-box-shadow: -7px 5px 17px #000000;
+  -webkit-box-shadow: -7px 5px 17px #000000;
+  box-shadow: -7px 5px 17px #000000;
+}
 h1 {
   text-align: center;
 }
 p {
   text-align: center;
+}
+.moving{
+margin-left:auto;
+margin-right:auto;
+width:10%;
 }
 
