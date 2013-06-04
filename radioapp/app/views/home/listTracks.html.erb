@@ -1,0 +1,28 @@
+<input type="text" id="txtbuscar" />
+<input type="button" value="Buscar Track" onclick="buscarTrack();" />
+
+<h1> Lista Tracks </h1>
+<% @track.each  do |alb| %>
+    <% @hasta = alb[1]['opensearch:itemsPerPage'] %>
+<% end %> 
+<% @hasta.to_i %>
+<table >
+  <tr>
+    <th>.:: Img ::.</th>
+    <th>.:: Track ::.</th>
+    <th>.:: Artista ::.</th>
+  </tr>
+<% i = 0 %>
+<% num = @hasta.to_i %>
+<% begin %>
+  <% @track.each  do |alb| %>  
+    <tr>     
+    <td><img src="<%= alb[1]['trackmatches']['track'][i]['image'][0]['#text'] %>"  WIDTH=60 HEIGHT=80 /></td>
+    <td><%= alb[1]['trackmatches']['track'][i]['name'] %></td>
+    <td><%= alb[1]['trackmatches']['track'][i]['artist'] %></td>    
+  </tr>
+   <% end %> 
+<% i +=1 %>
+<% end while i < num %>
+</table>
+<%= "Hay " + @hasta + " registros encontrados" %>

@@ -1,0 +1,20 @@
+<%= render 'formlistartists' %>
+
+<h1> Lista Artistas </h1>
+<% @artist.each  do |art| %>
+    <% @hasta = art[1]['opensearch:itemsPerPage'] %>
+<% end %> 
+<% @hasta.to_i %>
+<table >
+  <tr>
+    <th>.:: Img ::.</th>
+    <th>.:: Artista ::.</th>
+    <th>.:: Biografía ::.</th>
+  </tr>
+  <tr>     
+    <td><img src="<%= @artist['artist']['image'][0]['#text'] %>"  WIDTH=60 HEIGHT=80 /></td>
+    <td><%= @artist['artist']['name'] %></td>
+    <td><%= @artist['artist']['bio']['summary'] %></td>
+   </tr>
+
+</table>

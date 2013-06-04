@@ -22,7 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem  'lastfm', '~> 1.19.0'
+gem 'lastfm-client', :git => 'http://github.com/pch/lastfm-client.git'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
